@@ -1,0 +1,38 @@
+@keyframes change-color {
+  10% { background-color: black }
+  20% { background-color: rebeccapurple }
+  30% { background-color: olive }
+  40% { background-color: orangered }
+  50% { background-color: aqua }
+  60% { background-color: peachpuff }
+  70% { background-color: lightsalmon }
+  80% { background-color: yellow }
+  90% { background-color: coral }
+  100% { background-color: palegreen }
+}
+
+@keyframes change {
+  to { background-color: blue }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden
+}
+
+.row {
+  float: left
+}
+
+.pixel {
+  height: calc(100vh / 25);
+  width: calc(100vw / 50);
+  background-color: white;
+  display: block;
+  animation: change-color 5s infinite
+}
+
+.pixel:hover {
+  animation: change 1s infinite
+}
